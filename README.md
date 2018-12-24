@@ -54,7 +54,7 @@
 - **Response Body**: 签名结果字符串
 
 #### 请求私有Bucket的对象下载链接签名
-- **URL**: http://your_domain/applyAuth
+- **URL**: http://your_domain/applyPrivateUrlAuth
 - **http method**: POST
 - **Content-Type**: application/json
 - **Request Body**:

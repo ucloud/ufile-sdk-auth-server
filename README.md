@@ -11,7 +11,7 @@
 - **Content-Type**: application/json
 - **Request Body**:
     
-    ``` json
+    ``` java
     {
         /**
          * Required
@@ -59,7 +59,7 @@
 - **Content-Type**: application/json
 - **Request Body**:
     
-    ``` json
+    ``` java
     {
         /**
          * Required

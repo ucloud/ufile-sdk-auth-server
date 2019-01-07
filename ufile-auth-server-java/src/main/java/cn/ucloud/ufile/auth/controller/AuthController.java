@@ -27,7 +27,8 @@ public class AuthController {
         System.out.println("applyAuth--->\n" + requestBean.toString());
         JsonElement jsonElement = new Gson().fromJson(requestBean.getOptional(), JsonElement.class);
         // 您可以根据您的项目需求，处理端传来的Optional参数集合
-        System.out.println(jsonElement.toString());
+        if (jsonElement != null)
+            System.out.println(jsonElement.toString());
         return ufileAuthService.calculateAuthroization(requestBean);
     }
 
@@ -37,7 +38,8 @@ public class AuthController {
         System.out.println("applyPrivateUrlAuth--->\n" + requestBean.toString());
         JsonElement jsonElement = new Gson().fromJson(requestBean.getOptional(), JsonElement.class);
         // 您可以根据您的项目需求，处理端传来的Optional参数集合
-        System.out.println(jsonElement.toString());
+        if (jsonElement != null)
+            System.out.println(jsonElement.toString());
         return ufileAuthService.calculatePrivateUrlAuthroization(requestBean);
     }
 }

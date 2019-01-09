@@ -2,8 +2,8 @@ import base64
 import hmac
 from hashlib import sha1
 
-PUBLIC_KEY = 'Kf6owXtNZSimr0rR7w9ew6Iclm1w73QB8+jUkiV7hXgBYtV5BNWN1LlNUko='
-PRIVATE_KEY = '9K91tK7hcpCFL+90HwVk8lGUwJrqqjzfUouDD47RLrs9f1Umt4gXx7LWwB4kE7um'
+PUBLIC_KEY = 您的公钥
+PRIVATE_KEY = 您的私钥
 
 
 class Authroizator:

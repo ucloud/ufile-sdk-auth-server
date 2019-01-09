@@ -1,4 +1,4 @@
-# ufile-sdk-auth-server
+# Ufile SDK remote Auth-Server
 
 ## 说明
 - 该项目用于Ufile SDK接入远端签名时使用

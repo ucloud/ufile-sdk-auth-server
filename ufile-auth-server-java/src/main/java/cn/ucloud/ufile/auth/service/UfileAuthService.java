@@ -33,15 +33,30 @@ public class UfileAuthService {
             signData.append(request.getDate() + "\n");
             signData.append("/" + request.getBucket());
             signData.append("/" + request.getKey());
+            if (request.getPut_policy() != null && !request.getPut_policy().isEmpty()) {
+                signData.append(request.getPut_policy());
+            }
 
             String signature = signature(privateKey, signData.toString());
 
-            return "UCloud " + publicKey + ":" + signature;
-        } catch (ValidatorException e) {
+            StringBuilder res = new StringBuilder("UCloud ")
+                    .append(publicKey)
+                    .append(":")
+                    .append(signature);
+
+            if (request.getPut_policy() != null && !request.getPut_policy().isEmpty()) {
+                res.append(":").append(request.getPut_policy());
+            }
+
+            return res.toString();
+        } catch (
+                ValidatorException e) {
             return e.getMessage();
-        } catch (Exception e) {
+        } catch (
+                Exception e) {
             return e.getMessage();
         }
+
     }
 
     public String calculatePrivateUrlAuthroization(AuthPrivateUrlRequest request) {

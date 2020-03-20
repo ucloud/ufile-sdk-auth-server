@@ -21,6 +21,7 @@ public class AuthRequest {
     private String content_md5 = "";
     private String date = "";
     private String optional;
+    private String put_policy;
 
     public String getMethod() {
         return method;
@@ -48,6 +49,10 @@ public class AuthRequest {
 
     public String getOptional() {
         return optional;
+    }
+
+    public String getPut_policy() {
+        return put_policy;
     }
 
     @Override
